@@ -1,0 +1,18 @@
+<template name="appointments">
+    <ul class="collection with-header">
+        {{#if hasAppointments}}
+            <li class="collection-header"><h4>Appointments ({{count}})</h4></li>
+        {{else}}
+            <li class="collection-header"><h4>No appointments</h4></li>
+        {{/if}}
+        {{#each appointments}}
+            <li class="collection-item">
+                <h6><strong>{{doctor_name}}</strong></h6>
+                <h6>{{full_name}}</h6>
+                <p>{{formatDate date}}</p>
+                <a id="{{_id}}" class="delete-appointment waves-effect waves-light btn">Delete</a>
+            </li>
+        {{/each}}
+    </ul>
+    {{> footer}}
+</template>

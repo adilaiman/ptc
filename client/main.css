@@ -9,3 +9,16 @@ html, body {
 #__blaze-root {
     height: 100%;
 }
+
+.collection {
+    margin: 0 !important;
+    min-height: 100% !important;
+  }
+
+.collection-item:last-child {
+    border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.delete-appointment:hover {
+    cursor: pointer !important;
+}
