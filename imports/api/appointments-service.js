@@ -41,7 +41,7 @@ export const getAllAppointments = new ValidatedMethod({
 /**
  * @summary checks if appointment exists
  * @function appointmentExists
- * @param {String} placesId - id to find location of doctor
+ * @param {String} placesId - id of doctor location
  * @param {Date} date - date of appointment
  * @param {String} full_name - full name of person booking
  * @param {String} email - email of person booking

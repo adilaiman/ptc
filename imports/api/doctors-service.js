@@ -5,7 +5,7 @@ import { ValidatedMethod } from 'meteor/mdg:validated-method';
 /**
  * @summary inserts a doctor
  * @function insertDoctor
- * @param {String} placesId - id to find location of doctor
+ * @param {String} placesId - id of doctor location
  * @param {String} name - name of doctor
  * @param {String} address - address of doctor
  * @param {String} phone - phone number of doctor
@@ -26,7 +26,7 @@ export const insertDoctor = new ValidatedMethod({
 /**
  * @summary gets a specific doctor
  * @function getDoctor
- * @param {String} placesId - id to find location of doctor
+ * @param {String} placesId - id of doctor location
  * @return {Object} doctor - a doctor object
  */
 export const getDoctor = new ValidatedMethod({
@@ -56,7 +56,7 @@ export const getAllDoctors = new ValidatedMethod({
  * @summary checks if doctor exists
  * @function doctorExists
  * @param {String} placesId - id of doctor location
- * @return {Boolean} appointmentExists - true if exists
+ * @return {Boolean} doctorExists - true if exists
  */
 export const doctorExists = new ValidatedMethod({
     name: 'doctors.Exists',
