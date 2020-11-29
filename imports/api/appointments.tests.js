@@ -34,7 +34,6 @@ if (Meteor.isServer) {
                 Appointments.remove({});
                 app1 = Factory.create('Appointment');
                 app2 = Factory.create('Appointment');
-                console.log(app1, app2);
             });
 
             describe('appointments.insert', function() {
