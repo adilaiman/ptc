@@ -39,7 +39,13 @@ if (Meteor.isServer) {
 
             describe('appointments.insert', function() {
                 it('inserts a appointment', function(done) {
-                    const testData = { placesId: Random.id(), date: new Date(), full_name: 'test', email: 'test@test.com', doctor_name: 'test'};
+                    const testData = {
+                        placesId: Random.id(),
+                        date: new Date(),
+                        full_name: 'test',
+                        email: 'test@test.com',
+                        doctor_name: 'test'
+                    };
                     insertAppointment.call(testData);
                     const dataFromCollection = Appointments.findOne(testData);
                     delete dataFromCollection._id;
@@ -58,11 +64,23 @@ if (Meteor.isServer) {
             describe('appointments.appointmentExists', function() {
                 it('returns true if appointment already exists', function(done) {
                     const { placesId, date, full_name, email, doctor_name } = app1;
-                    assert.isTrue(appointmentExists.call({ placesId, date, full_name, email, doctor_name }));
+                    assert.isTrue(appointmentExists.call({
+                        placesId,
+                        date,
+                        full_name,
+                        email,
+                        doctor_name
+                    }));
                     done();
                 });
                 it('returns false if appointment does not exists', function(done) {
-                    assert.isFalse(appointmentExists.call({ placesId: '', date: new Date(), full_name: '', email: '', doctor_name: '' }));
+                    assert.isFalse(appointmentExists.call({
+                        placesId: '',
+                        date: new Date(),
+                        full_name: '',
+                        email: '',
+                        doctor_name: ''
+                    }));
                     done();
                 });
             });

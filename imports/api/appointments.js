@@ -1,7 +1,7 @@
 import { Mongo } from 'meteor/mongo';
 import { Random } from 'meteor/random';
 import { Factory } from 'meteor/dburles:factory';
-import faker, { date } from 'faker';
+import faker from 'faker';
 
 export default Appointments = new Mongo.Collection('appointments');
 
