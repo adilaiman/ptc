@@ -23,4 +23,11 @@
     <li><a href='/'>Doctors</a></li>
     <li><a href='/appointments'>Appointments</a></li>
   </ul>
+  {{> MainLayout}}
+
+  {{#if isReady}}
+  {{#each gpList}}
+    {{>modal}}
+  {{/each}}
+  {{/if}}
 </body>

@@ -25,6 +25,14 @@ export const getDoctor = new ValidatedMethod({
     }
 });
 
+export const getAllDoctors = new ValidatedMethod({
+    name: 'doctors.getAllDoctors',
+    validate: null,
+    run() {
+        return Doctors.find({}).fetch();
+    }
+});
+
 export const doctorExists = new ValidatedMethod({
     name: 'doctors.Exists',
     validate: new SimplSchema({

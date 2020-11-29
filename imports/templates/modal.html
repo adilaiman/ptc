@@ -1,0 +1,36 @@
+<template name="modal">
+    <div id="modal-{{placesId}}" class="modal">
+        <div class="modal-content">
+          <h4>Book Appointment</h4>
+          <p id="doctor_name-{{placesId}}">{{name}}</p>
+          <p>{{address}}</p>
+          <p>{{phone}}</p>
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="date-{{placesId}}" type="text" class="datepicker">
+                  <label for="date-{{placesId}}">Date</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="full_name-{{placesId}}" type="text" class="validate">
+                  <label for="full_name-{{placesId}}">First Name</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="email-{{placesId}}" type="email" class="validate">
+                  <label for="email-{{placesId}}">Email</label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a id="book" class="waves-effect waves-green btn-flat">Book</a>
+          <a class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+</template>
