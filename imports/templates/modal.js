@@ -13,6 +13,7 @@ Template.modal.onRendered(function () {
           $("#date").val(dateText);
         },
         format: "yyyy-mm-dd",
+        minDate: new Date(),
     });
 });
 
