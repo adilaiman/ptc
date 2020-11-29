@@ -23,3 +23,7 @@ fourseven:scss
 mdg:validated-method
 ostrio:flow-router-extra
 kadira:blaze-layout
+meteortesting:mocha
+lmieulet:meteor-coverage
+johanbrook:publication-collector
+dburles:factory
